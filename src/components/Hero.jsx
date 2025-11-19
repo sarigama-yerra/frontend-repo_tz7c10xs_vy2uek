@@ -42,7 +42,7 @@ export default function Hero({ onOpenLogin, onStart }) {
           </a>
           <div className="flex items-center gap-3">
             <a href="#how" className="text-white/70 hover:text-white transition-colors text-sm">How it works</a>
-            <a href="#models" className="text-white/70 hover:text-white transition-colors text-sm">Models</a>
+            <a href="#about" className="text-white/70 hover:text-white transition-colors text-sm">Models</a>
             <a href="#demo" className="text-white/70 hover:text-white transition-colors text-sm">Live demo</a>
             {/* Contact as plain text link (no box) */}
             <a href="#contact" className="text-white/70 hover:text-white transition-colors text-sm">Contact</a>
