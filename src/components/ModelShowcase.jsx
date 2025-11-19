@@ -120,28 +120,6 @@ export default function ModelShowcase(){
             Visual guide only. The live demo below uses the same stages before inference.
           </p>
         </motion.div>
-
-        {/* Notes */}
-        <div className="mt-10 mx-auto max-w-3xl">
-          <motion.h3
-            initial={{opacity:0,y:6}}
-            whileInView={{opacity:1,y:0}}
-            viewport={{once:true}}
-            transition={{duration:.5}}
-            className="text-lg md:text-xl font-semibold text-white"
-          >
-            Notes on training
-          </motion.h3>
-          <motion.p
-            initial={{opacity:0,y:6}}
-            whileInView={{opacity:1,y:0}}
-            viewport={{once:true}}
-            transition={{duration:.5, delay:.05}}
-            className="mt-3 text-white/80"
-          >
-            We monitor ROC‑AUC and F1, apply temperature scaling for probability calibration, and export a lightweight head for on‑device inference when needed. The diagram above summarizes the flow; the focus remains on methodology and reproducibility.
-          </motion.p>
-        </div>
       </div>
     </section>
   )
