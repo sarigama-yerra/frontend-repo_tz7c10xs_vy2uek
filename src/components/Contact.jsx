@@ -29,7 +29,7 @@ export default function Contact(){
   const input = 'w-full bg-transparent text-white placeholder-white/30 focus:outline-none'
 
   return (
-    <section className="relative bg-slate-950 py-20">
+    <section id="contact" className="relative bg-slate-950 py-20">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(217,70,239,0.08),transparent_60%)]" />
       <div className="relative mx-auto max-w-4xl px-6">
         <motion.h2 initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:.6}} className="text-3xl md:text-5xl font-bold text-white text-center">Get in touch</motion.h2>

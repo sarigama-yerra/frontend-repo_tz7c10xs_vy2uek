@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
+import About from './components/About'
 import LiveDemo from './components/LiveDemo'
 import CarouselUseCases from './components/CarouselUseCases'
 import Testimonials from './components/Testimonials'
@@ -18,6 +19,7 @@ function App() {
         if(el) el.scrollIntoView({ behavior: 'smooth' })
       }} />
       <HowItWorks />
+      <About />
       <LiveDemo />
       <CarouselUseCases />
       <Testimonials />

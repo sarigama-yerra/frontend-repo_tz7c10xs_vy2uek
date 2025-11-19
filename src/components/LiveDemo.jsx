@@ -30,8 +30,8 @@ export default function LiveDemo(){
     setStatus('Analyzing sample...')
     setTimeout(()=>{
       const classes = ['Malaria detected', 'Leptospirosis detected', 'No pathogen detected']
-      const choice = classes[Math.floor(Math.random()*classes.length)]
       const conf = (Math.random()*20+80).toFixed(2)
+      const choice = classes[Math.floor(Math.random()*classes.length)]
       setStatus(`${choice} • Confidence ${conf}%`)
     }, 1500)
   }
@@ -41,8 +41,16 @@ export default function LiveDemo(){
   return (
     <section id="demo" className="relative bg-slate-950 py-20">
       <div className="relative mx-auto max-w-7xl px-6">
-        <motion.h2 initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:.6}} className="text-3xl md:text-5xl font-bold text-white text-center">Live Detection Demo</motion.h2>
-        <p className="mt-3 text-center text-white/70 max-w-2xl mx-auto">Glassy panel with drag-and-drop upload and animated scanning feedback.</p>
+        <motion.div initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:.6}} className="flex items-end justify-between gap-4">
+          <div>
+            <h2 className="text-3xl md:text-5xl font-bold text-white">Live Detection Demo</h2>
+            <p className="mt-3 text-white/70 max-w-2xl">Glassy panel with drag-and-drop upload and animated scanning feedback.</p>
+          </div>
+          <a href="#contact" className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl bg-cyan-500/20 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-cyan-400/40 transition">
+            <span className="relative z-10">Contact</span>
+            <span className="pointer-events-none absolute inset-0 bg-gradient-to-r from-cyan-400/40 to-fuchsia-400/40 opacity-0 group-hover:opacity-100 transition" />
+          </a>
+        </motion.div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-xl">
@@ -66,7 +74,7 @@ export default function LiveDemo(){
               {preview ? (
                 <img src={preview} alt="preview" className="h-full w-full object-contain" style={{imageRendering:'auto'}} />
               ) : (
-                <div className="absolute inset-0 grid place-content-center text-white/60">3D sample preview</div>
+                <div className="absolute inset-0 grid place-content-center text-white/60">Sample preview</div>
               )}
               {!preview && (
                 <>
