@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
 import About from './components/About'
+import ModelShowcase from './components/ModelShowcase'
 import LiveDemo from './components/LiveDemo'
 import CarouselUseCases from './components/CarouselUseCases'
 import Testimonials from './components/Testimonials'
@@ -20,6 +21,8 @@ function App() {
       }} />
       <HowItWorks />
       <About />
+      {/* Models section so the nav link works */}
+      <ModelShowcase />
       <LiveDemo />
       <CarouselUseCases />
       <Testimonials />
