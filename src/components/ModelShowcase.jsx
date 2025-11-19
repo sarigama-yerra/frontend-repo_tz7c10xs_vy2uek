@@ -16,7 +16,7 @@ export default function ModelShowcase(){
           transition={{duration:.6}}
           className="text-3xl md:text-5xl font-bold text-white text-center"
         >
-          Model Overview
+          End-to-end Architecture
         </motion.h2>
 
         <motion.p
