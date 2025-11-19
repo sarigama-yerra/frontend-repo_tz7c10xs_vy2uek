@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
+import Logo from './Logo'
 
 export default function Hero({ onOpenLogin, onStart }) {
   const overlayRef = useRef(null)
@@ -36,17 +37,14 @@ export default function Hero({ onOpenLogin, onStart }) {
       {/* Top Navigation */}
       <div className="relative z-10">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-lg bg-white/10 backdrop-blur-md ring-1 ring-white/20 flex items-center justify-center">
-              <span className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_12px_2px_rgba(34,211,238,0.8)]" />
-            </div>
-            <span className="text-white/90 font-semibold tracking-wide">MedAI Labs</span>
-          </div>
+          <a href="#top" className="transition-transform hover:scale-[1.02] active:scale-[0.98]">
+            <Logo size={44} withText className="drop-shadow-[0_0_12px_rgba(56,189,248,0.25)]" />
+          </a>
           <div className="flex items-center gap-3">
             <a href="#how" className="text-white/70 hover:text-white transition-colors text-sm">How it works</a>
             <a href="#models" className="text-white/70 hover:text-white transition-colors text-sm">Models</a>
             <a href="#demo" className="text-white/70 hover:text-white transition-colors text-sm">Live demo</a>
-            <button onClick={onOpenLogin} className="ml-2 relative overflow-hidden rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/20 hover:ring-cyan-400/50 transition-all">
+            <button onClick={onOpenLogin} className="group ml-2 relative overflow-hidden rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/20 hover:ring-cyan-400/50 transition-all">
               <span className="relative z-10">Login</span>
               <span className="absolute inset-0 bg-gradient-to-r from-cyan-400/30 to-fuchsia-400/30 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>

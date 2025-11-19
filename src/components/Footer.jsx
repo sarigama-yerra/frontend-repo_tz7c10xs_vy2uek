@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Logo from './Logo'
 
 export default function Footer(){
   return (
@@ -21,6 +22,7 @@ export default function Footer(){
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center gap-4 text-center">
+          <Logo size={38} withText className="opacity-90" />
           <h3 className="text-white/90 text-lg font-semibold">Ready to accelerate diagnostics?</h3>
           <a href="#demo" className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl bg-cyan-500/20 px-6 py-3 font-semibold text-white ring-1 ring-cyan-400/40 transition">
             <span className="relative z-10">Start a pilot</span>
