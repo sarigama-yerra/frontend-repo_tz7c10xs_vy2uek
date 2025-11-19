@@ -51,7 +51,7 @@ export default function LiveDemo(){
             >
               <input type="file" accept="image/*" onChange={onPick} className="absolute inset-0 opacity-0 cursor-pointer" />
               <UploadCloud className="h-10 w-10 text-cyan-300" />
-              <p className="mt-3 text-sm">Drag & drop blood smear image or click to upload</n>
+              <p className="mt-3 text-sm">Drag & drop blood smear image or click to upload</p>
             </div>
             <div className="mt-4 h-10 w-full overflow-hidden rounded-lg bg-gradient-to-r from-cyan-400/20 via-fuchsia-400/20 to-emerald-400/20">
               <div className="h-full w-1/3 animate-[shimmer_2s_ease_infinite] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
