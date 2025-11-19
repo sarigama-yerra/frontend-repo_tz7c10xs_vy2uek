@@ -44,7 +44,11 @@ export default function Hero({ onOpenLogin, onStart }) {
             <a href="#how" className="text-white/70 hover:text-white transition-colors text-sm">How it works</a>
             <a href="#models" className="text-white/70 hover:text-white transition-colors text-sm">Models</a>
             <a href="#demo" className="text-white/70 hover:text-white transition-colors text-sm">Live demo</a>
-            <button onClick={onOpenLogin} className="group ml-2 relative overflow-hidden rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/20 hover:ring-cyan-400/50 transition-all">
+            <a href="#contact" className="group relative overflow-hidden rounded-xl px-4 py-2 text-sm font-semibold text-white/80 ring-1 ring-white/15 hover:text-white hover:ring-cyan-400/40 transition-colors">
+              <span className="relative z-10">Contact</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent group-hover:from-cyan-400/10 group-hover:to-fuchsia-400/10 transition-colors" />
+            </a>
+            <button onClick={onOpenLogin} className="group ml-1 relative overflow-hidden rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/20 hover:ring-cyan-400/50 transition-all">
               <span className="relative z-10">Login</span>
               <span className="absolute inset-0 bg-gradient-to-r from-cyan-400/30 to-fuchsia-400/30 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>

@@ -46,10 +46,6 @@ export default function LiveDemo(){
             <h2 className="text-3xl md:text-5xl font-bold text-white">Live Detection Demo</h2>
             <p className="mt-3 text-white/70 max-w-2xl">Glassy panel with drag-and-drop upload and animated scanning feedback.</p>
           </div>
-          <a href="#contact" className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl bg-cyan-500/20 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-cyan-400/40 transition">
-            <span className="relative z-10">Contact</span>
-            <span className="pointer-events-none absolute inset-0 bg-gradient-to-r from-cyan-400/40 to-fuchsia-400/40 opacity-0 group-hover:opacity-100 transition" />
-          </a>
         </motion.div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
