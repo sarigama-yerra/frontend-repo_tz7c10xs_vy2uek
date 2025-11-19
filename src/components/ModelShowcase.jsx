@@ -24,11 +24,46 @@ export default function ModelShowcase(){
           ))}
         </div>
 
+        {/* 3D-like Neural Sphere (CSS + motion) */}
         <div className="mt-12 flex justify-center">
-          <motion.div initial={{opacity:0,scale:.95}} whileInView={{opacity:1,scale:1}} viewport={{once:true}} transition={{duration:.8}} className="relative h-64 w-64 rounded-full bg-gradient-to-br from-cyan-400/20 to-fuchsia-400/20 ring-1 ring-white/10">
-            <div className="absolute inset-0 animate-[spin_16s_linear_infinite] rounded-full bg-[conic-gradient(from_90deg,rgba(34,211,238,0.35),rgba(217,70,239,0.35),rgba(16,185,129,0.35),rgba(59,130,246,0.35),rgba(34,211,238,0.35))]" />
-            <div className="absolute inset-6 rounded-full bg-slate-900/80 backdrop-blur-xl ring-1 ring-white/10 flex items-center justify-center">
-              <span className="text-white/80 text-sm">3D Neural Sphere</span>
+          <motion.div
+            initial={{opacity:0, scale:.9}}
+            whileInView={{opacity:1, scale:1}}
+            viewport={{once:true}}
+            transition={{duration:.8}}
+            className="relative h-64 w-64 rounded-full ring-1 ring-white/10"
+            style={{
+              background: 'radial-gradient(circle at 30% 30%, rgba(34,211,238,0.35), transparent 40%), radial-gradient(circle at 70% 70%, rgba(217,70,239,0.35), transparent 45%), radial-gradient(circle at 50% 50%, rgba(16,185,129,0.25), rgba(2,6,23,1) 60%)'
+            }}
+          >
+            {/* Outer rotating glow */}
+            <motion.div
+              aria-hidden
+              className="absolute inset-0 rounded-full"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 24, ease: 'linear' }}
+              style={{
+                background: 'conic-gradient(from 0deg, rgba(34,211,238,0.25), rgba(217,70,239,0.25), rgba(16,185,129,0.25), rgba(59,130,246,0.25), rgba(34,211,238,0.25))'
+              }}
+            />
+
+            {/* Inner core with subtle blur and depth */}
+            <div className="absolute inset-6 rounded-full bg-slate-900/80 backdrop-blur-xl ring-1 ring-white/10" />
+
+            {/* Orbiting particles */}
+            {[0,1,2,3,4,5].map((i)=> (
+              <motion.span
+                key={i}
+                className="absolute h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_2px_rgba(34,211,238,0.6)]"
+                style={{ top: '50%', left: '50%', transformOrigin: '0 -110px' }}
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 10 + i*2, ease: 'linear' }}
+              />
+            ))}
+
+            {/* Label */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-white/90 text-sm">3D Neural Sphere</span>
             </div>
           </motion.div>
         </div>
